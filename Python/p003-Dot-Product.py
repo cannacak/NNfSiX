@@ -14,3 +14,7 @@ biases = [2.0, 3.0, 0.5]
 
 output = np.dot(weights, inputs) + biases
 print(output)
+
+#i am adding this code just for fun, this is a good example of functional programming
+
+output = list(map(add,biases,[sum(map(lambda x,y: x*y,inputs,weight)) for weight in weights ]))
